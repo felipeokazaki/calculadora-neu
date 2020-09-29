@@ -1,0 +1,225 @@
+*, *::before, *::after { box-sizing: inherit; }
+
+html {
+box-sizing: border-box;
+}
+
+:root{
+    --bg-color: rgba(232, 232, 232, 1);
+    --outer-shadow: 6px 6px 10px rgba(0 , 0 ,0 , 0.3), -8px -8px 15px rgba(255 , 255 ,255 , 0.8);
+    --shadow-all: 4px 4px 6px rgba(0 , 0 ,0 , 0.15),
+                  -6px -6px 8px rgba(255 , 255 ,255 , 1),
+                  inset -3px -3px 5px rgba(255, 255, 255, 0.6),
+                  inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+    --inner-shadow: inset -6px -6px 15px rgba(255, 255, 255, 0.9),
+                    inset 5px 5px 12px rgba(0, 0, 0, 0.2);
+    --color-blueish: #465964;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #E8E8E8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    /* border: solid orange 2px; */
+}
+
+p , h1, li , .igual{
+    color: var(--color-blueish);
+    font-weight: bold;
+}
+
+#outer-calc{
+    width: 640px;
+    height: 700px;
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    box-shadow: var(--outer-shadow);
+}
+
+#visor{
+    background-color: var(--bg-color);
+    box-shadow: var(--inner-shadow);
+    border-radius:15px;
+    flex-basis: 600px;
+    height: 150px;
+    padding: 0 50px 20px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#visor >  h1 {
+    margin-left: 190px;
+    font-size: 56px;
+    position: relative;
+    top: 35px;
+}
+
+
+#esquerda{
+    position: relative; 
+    margin-top: 55px;
+    margin-right: 20px;
+    height: 450px;
+    width: 350px;
+    /* border: solid black 2px; */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.hist{
+    /* flex-basis: 290px; */
+    flex-basis: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.hist li{
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    height: 32px;
+    flex-basis: 64px;
+    margin: 0 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-all);
+}
+
+
+.num{
+    flex-basis: 100%;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: -15px;
+}
+
+.num li {
+    height: 64px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-all);
+    border-radius: 35px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 64px;
+    margin: 0 15px;
+}
+
+
+#direita{
+    position: relative;
+    right: 10px;
+    margin-top: 55px;
+    height: 450px;
+    width: 223px;
+    /* border: solid black 2px;  */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.back{
+
+    /* border-radius: 20px; */
+    height: 40px;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    /* margin: 0 auto; */
+    height: 32px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-all);
+    border-radius: 20px;
+    flex-basis: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 10px;
+}
+
+.ops{
+    /* border: solid red 1px; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    position: relative;
+    /* top: -8px; */
+    right: 12px;
+    height: 265px;
+    align-content: center;
+
+}
+
+.ops li{
+    width: 64px;
+    height: 64px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-all);
+    border-radius: 35px;
+    text-align: center;
+    /* padding: 30px;
+    margin: 5px; */
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.igual{
+    text-align: center;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow-all);
+    border-radius: 35px;
+    height: 64px;
+    width: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -8px;
+}
+
+li:hover{
+    box-shadow: var(--inner-shadow);
+}
+
+.container:hover , .igual:hover{
+    box-shadow: var(--inner-shadow);
+}
